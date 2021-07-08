@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>邮件发送</title>
+  </head>
+  <body>
+    <h1>Flask + Celery Examples</h1>
+    <h2>Example 1: Send Asynchronous Email</h2>
+    {% for message in get_flashed_messages() %}
+    <p style="color: red;">{{ message }}</p>
+    {% endfor %}
+    <form method="POST">
+      <div>邮件地址：<input type="text" name="email" value="{{ email }}"></div>
+     
+      <br>
+      <div>
+           文件标题：<input type="text" name="title">
+      </div>
+
+      <HR>
+      <div>
+        <textarea rows="10" cols="50" name="centent">
+        
+        </textarea>
+      </div>
+      <div>
+        <input type="submit" name="submit" value="Send">
+        <input type="submit" name="submit" value="Send in 1 minute">
+      </div>
+    </form>
+  </body>
+</html>
